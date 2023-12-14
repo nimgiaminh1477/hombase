@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h1>User List</h1>
+
+    {% if user_list %}
+        <ul>
+            {% for user in user_list %}
+                <li>
+                    <strong>User ID:</strong> {{ user.id }}, 
+                    <strong>FirstName:</strong> {{ user.firstName }}, 
+                    <strong>LastName:</strong> {{ user.lastName }}, 
+                    <strong>Email:</strong> {{ user.email }}
+                    <a href="{% url 'user_data' user_id=user.id %}">View Details</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No users available.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data</title>
+</head>
+<body>
+    <a href="{% url 'user_list' %}">Back to List</a>
+    <h1>User Data</h1>
+    <p>User ID: {{ user_data.id }}</p>
+    <p>FirstName: {{ user_data.firstName }}</p>
+    <p>LastName: {{ user_data.lastName }}</p>
+    <p>Email: {{ user_data.email }}</p>
+    <!-- Add other user data fields as needed -->
+</body>
+</html>
